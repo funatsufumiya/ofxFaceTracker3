@@ -9,9 +9,9 @@ void ofApp::setup(){
 		// uncomment this for threaded detecion (default false)
 		// tracker.setThreaded(true);
 #ifdef _MSC_VER
-		tracker.setupGpu(); // CUDA
+		// tracker.setupGpu(); // CUDA
 		//tracker.setupGpu("model/yolov5s-face_640x640.onnx", 0, true); // TensorRT
-		//tracker.setupCpu(); // CPU
+		tracker.setupCpu(); // CPU
 #else
 		tracker.setupCpu();
 #endif
